@@ -18,5 +18,6 @@ class Genre < ActiveRecord::Base
     self.artists. map do |artist|
       artist_names << artist.name
     end
+    artist_names.uniq
   end
 end
